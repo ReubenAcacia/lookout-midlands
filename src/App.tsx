@@ -87,7 +87,7 @@ const LOCATIONS = [
   { id: 'nuneaton',             label: 'Nuneaton',             group: 'Warwickshire' },
   { id: 'rugby',                label: 'Rugby',                group: 'Warwickshire' },
   { id: 'stratford',            label: 'Stratford-on-Avon',    group: 'Warwickshire' },
-  { id: 'warwick',              label: 'Warwick',              group: 'Warwickshire' },
+  { id: 'warwick',              label: 'Warwick and Leamington', group: 'Warwickshire' },
   { id: 'bromsgrove',           label: 'Bromsgrove',           group: 'Worcestershire' },
   { id: 'malvernhills',         label: 'Malvern Hills',        group: 'Worcestershire' },
   { id: 'redditch',             label: 'Redditch',             group: 'Worcestershire' },

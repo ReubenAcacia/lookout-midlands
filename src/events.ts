@@ -47,7 +47,7 @@ const LBL: Record<string, string> = {
   nuneaton: 'Nuneaton',
   rugby: 'Rugby',
   stratford: 'Stratford-upon-Avon',
-  warwick: 'Warwick',
+  warwick: 'Warwick and Leamington',
   bromsgrove: 'Bromsgrove',
   malvernhills: 'Malvern Hills',
   redditch: 'Redditch',
