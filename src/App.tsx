@@ -90,7 +90,7 @@ const LOCATIONS = [
   { id: 'redditch',             label: 'Redditch',             group: 'Worcestershire' },
   { id: 'worcester',            label: 'Worcester',            group: 'Worcestershire' },
   { id: 'wychavon',             label: 'Wychavon',             group: 'Worcestershire' },
-  { id: 'wyreforest',           label: 'Wyre Forest',          group: 'Worcestershire' },
+  { id: 'wyreforest',           label: 'Kidderminster',        group: 'Worcestershire' },
 ];
 
 // ----- Recommendation engine: pure local filter --------------

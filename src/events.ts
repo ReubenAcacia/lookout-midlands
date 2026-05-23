@@ -50,7 +50,7 @@ const LBL: Record<string, string> = {
   redditch: 'Redditch',
   worcester: 'Worcester',
   wychavon: 'Wychavon',
-  wyreforest: 'Wyre Forest',
+  wyreforest: 'Kidderminster',
 };
 
 const ALL_LGAS = Object.keys(LBL);
