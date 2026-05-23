@@ -37,10 +37,7 @@ const LBL: Record<string, string> = {
   stoke: 'Stoke-on-Trent',
   telford: 'Telford',
   cannockchase: 'Cannock Chase',
-  eaststaffs: 'East Staffordshire',
   lichfield: 'Lichfield',
-  newcastleulyme: 'Newcastle-under-Lyme',
-  southstaffs: 'South Staffordshire',
   stafford: 'Stafford',
   staffsmoorlands: 'Staffordshire Moorlands',
   tamworth: 'Tamworth',
@@ -517,14 +514,14 @@ const flavour: Ev[] = [
   // Cannock Chase
   lgaEv('cannockchase', 'Go Ape Cannock', 'Birches Valley, Cannock', 'Daily', '9am-5pm', '£35', ['family','walking'], 'Tree-top course.', 'Worth the harness.', 'https://goape.co.uk/'),
   // East Staffs
-  lgaEv('eaststaffs', 'National Brewery Centre, Burton', 'Horninglow St, Burton', 'Wed-Sun', '10am-4pm', '£10', ['museums','food'], 'Brewing heritage + tastings.', 'A pint with provenance.', 'https://nationalbrewerycentre.com/'),
+  lgaEv('staffsmoorlands', 'National Brewery Centre, Burton', 'Horninglow St, Burton', 'Wed-Sun', '10am-4pm', '£10', ['museums','food'], 'Brewing heritage + tastings.', 'A pint with provenance.', 'https://nationalbrewerycentre.com/'),
   // Lichfield
   lgaEv('lichfield', 'Lichfield Cathedral', 'Lichfield Cathedral', 'Daily', '8am-6pm', 'Donation', ['museums','community'], 'Three-spired Gothic cathedral.', 'Free entry, donation requested.', 'https://www.lichfield-cathedral.org/'),
   lgaEv('lichfield', 'Samuel Johnson Birthplace', 'Lichfield', 'Mon-Sat', '10am-4pm', '£5', ['museums','books'], 'Dictionary-maker\'s home.', 'Tiny, sharp, perfectly curated.', 'https://www.samueljohnsonbirthplace.org.uk/'),
   // Newcastle-under-Lyme
-  lgaEv('newcastleulyme', 'New Vic Theatre', 'New Vic, Newcastle-under-Lyme', 'Tue-Sat', '7.30pm', '£18', ['theatre','community'], 'UK\'s first purpose-built theatre-in-round.', 'Programming is consistently brave.', 'https://www.newvictheatre.org.uk/'),
+  lgaEv('stoke', 'New Vic Theatre', 'New Vic, Newcastle-under-Lyme', 'Tue-Sat', '7.30pm', '£18', ['theatre','community'], 'UK\'s first purpose-built theatre-in-round.', 'Programming is consistently brave.', 'https://www.newvictheatre.org.uk/'),
   // South Staffs
-  lgaEv('southstaffs', 'Shugborough Estate', 'Shugborough, Staffordshire', 'Daily', '10am-5pm', '£15', ['museums','family','walking'], 'National Trust estate.', 'Big house, big grounds.', 'https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/shugborough-estate'),
+  lgaEv('cannockchase', 'Shugborough Estate', 'Shugborough, Staffordshire', 'Daily', '10am-5pm', '£15', ['museums','family','walking'], 'National Trust estate.', 'Big house, big grounds.', 'https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/shugborough-estate'),
   // Stafford
   lgaEv('stafford', 'Gatehouse Theatre Stafford', 'Eastgate St, Stafford', 'Wed-Sat', '7.30pm', '£15', ['theatre','family'], 'Mid-scale touring + local.', 'County town\'s arts hub.', 'https://www.staffordgatehousetheatre.co.uk/'),
   lgaEv('stafford', 'Stafford Castle', 'Stafford Castle, Stafford', 'Daily', '11am-4pm', 'Free', ['museums','walking','family'], 'Ruined Norman castle.', 'A view, a wander, free.', 'https://www.staffordbc.gov.uk/stafford-castle'),
