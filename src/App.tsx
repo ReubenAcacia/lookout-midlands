@@ -732,6 +732,27 @@ function ResultsScreen({ profile, events, onRestart }: any) {
                 }}>Why you →</span>
                 {ev.why}
               </div>
+
+              {ev.url && (
+                <a
+                  href={ev.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    marginTop: '12px',
+                    padding: '8px 14px',
+                    background: colour.bg,
+                    color: PALETTE.paper,
+                    textDecoration: 'none',
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: '10px',
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    border: `1px solid ${colour.deep}`,
+                  }}
+                >Tickets &amp; info →</a>
+              )}
             </article>
           );
         })}

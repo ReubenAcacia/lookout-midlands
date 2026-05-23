@@ -7,6 +7,7 @@
 // Each event has:
 //  - tags: which preference IDs from the 30-option palette it satisfies
 //  - city: a LOCATION id (or 'multi' for region-wide)
+//  - url:  ticket / info page
 // ============================================================
 
 export const EVENTS = [
@@ -21,6 +22,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Intimate songwriter, slow-burning.',
     why: 'For the singer-songwriter strand.',
+    url: 'https://bmusic.co.uk/events/ray-lamontagne',
   },
   {
     title: 'Dirty Dancing in Concert',
@@ -32,6 +34,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Film + live orchestra.',
     why: 'Cult favourite, big hall sound.',
+    url: 'https://www.ticketmaster.co.uk/dirty-dancing-in-concert-tickets/artist/1675209',
   },
   {
     title: 'Disney & The Novello Orchestra',
@@ -43,6 +46,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Disney scores, played live.',
     why: 'A family-safe evening.',
+    url: 'https://www.ticketmaster.co.uk/disney-in-concert-the-sound-of-magic-tickets/artist/1400048',
   },
   {
     title: 'Jason Isbell & the 400 Unit',
@@ -54,6 +58,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Americana, articulate.',
     why: 'Songwriter side of rock.',
+    url: 'https://www.ents24.com/birmingham-events/symphony-hall/jason-isbell-and-the-400-unit/7406846',
   },
   {
     title: 'Elvis Costello & The Imposters',
@@ -65,6 +70,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'New wave royalty with bite.',
     why: 'Cross-over for the 70s strand.',
+    url: 'https://bmusic.co.uk/events/elvis-costello-the-imposters-2026',
   },
   {
     title: 'Sounds of the 60s Live (Tony Blackburn)',
@@ -76,6 +82,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Radio 2 nostalgia, live.',
     why: '60s end of the songbook.',
+    url: 'https://bmusic.co.uk/events/sounds-of-the-60s-live-hosted-by-tony-blackburn-obe-2026',
   },
   {
     title: 'Scott Bradlee\'s Postmodern Jukebox',
@@ -87,6 +94,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Pop hits, vintage jazz arrangements.',
     why: 'Genuine swing-band fun.',
+    url: 'https://www.songkick.com/concerts/42897890-scott-bradlees-postmodern-jukebox-at-symphony-hall',
   },
   {
     title: 'Rumours of Fleetwood Mac',
@@ -98,6 +106,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Tight late-70s Mac tribute.',
     why: 'Clean 70s rock pick.',
+    url: 'https://bmusic.co.uk/events/rumours-of-fleetwood-mac-2026',
   },
   {
     title: 'CBSO — Mozart & Brahms',
@@ -109,6 +118,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Mozart 39, Brahms 3.',
     why: 'Programme of substance.',
+    url: 'https://cbso.co.uk/whats-on',
   },
   {
     title: 'CBSO — Mahler 5',
@@ -120,6 +130,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Full Mahler symphony, big band.',
     why: 'A proper night out.',
+    url: 'https://www.whatsonlive.co.uk/birmingham/event/symphony-hall/cbso-mahlers-fifth-symphony/274584',
   },
 
   // ===== BIRMINGHAM — Hare & Hounds (Kings Heath) =====
@@ -133,6 +144,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Old-school house & breakbeat.',
     why: 'Veteran DJs, intimate room.',
+    url: 'https://www.skiddle.com/g/heritagenights/',
   },
   {
     title: 'KH Comedy Fest — Rosie Jones (WIP)',
@@ -144,6 +156,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Work-in-progress new material.',
     why: 'Rare small-room outing.',
+    url: 'https://hareandhoundskingsheath.co.uk/',
   },
   {
     title: 'Blues Club (weekly)',
@@ -155,6 +168,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Saturday afternoon blues sessions.',
     why: 'Stalwart of the local scene.',
+    url: 'https://www.skiddle.com/whats-on/Birmingham/Hare-And-Hounds-Kings-Heath/',
   },
 
   // ===== BIRMINGHAM — Other music venues =====
@@ -168,6 +182,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Mike Skinner, full band.',
     why: 'Birmingham homecoming.',
+    url: 'https://www.livenation.co.uk/event/the-streets-birmingham-tickets-edp1633842',
   },
   {
     title: 'Royel Otis',
@@ -179,6 +194,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Australian indie duo, hyped.',
     why: 'Currently very of-the-moment.',
+    url: 'https://www.academymusicgroup.com/o2academybirmingham/events/royel-otis-tickets-ae1383343',
   },
   {
     title: 'Culture Wars',
@@ -190,6 +206,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Post-hardcore, sharp.',
     why: 'For the louder end.',
+    url: 'https://www.deadwaxdigbeth.pub/events',
   },
   {
     title: 'Aur',
@@ -201,6 +218,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Cymraeg-language indie pop.',
     why: 'Something properly new.',
+    url: 'https://www.mamarouxs.co.uk/',
   },
   {
     title: 'Leo Sayer',
@@ -212,6 +230,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'The full back catalogue.',
     why: 'For the 70s pop strand.',
+    url: 'https://bmusic.co.uk/events/leo-sayer-2026',
   },
 
   // ===== BIRMINGHAM — Meditation, faith, wellbeing =====
@@ -225,6 +244,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Silent practice, drop-in.',
     why: 'Standing meditation pick.',
+    url: 'https://birminghambuddhistcentre.org.uk/',
   },
   {
     title: 'Birmingham Buddhist Centre — Intro Course',
@@ -236,6 +256,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Six-week beginners course.',
     why: 'Best on-ramp.',
+    url: 'https://birminghambuddhistcentre.org.uk/introductory-courses/',
   },
   {
     title: 'Birmingham Buddhist Vihara — Zen Group',
@@ -247,6 +268,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Small Zen sitting group.',
     why: 'More orthodox alternative.',
+    url: 'https://birminghambuddhistvihara.org/',
   },
   {
     title: 'Yoga in the Park',
@@ -258,6 +280,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Outdoor vinyasa, all levels.',
     why: 'Light, social, weather permitting.',
+    url: 'https://www.eventbrite.co.uk/d/united-kingdom--birmingham/yoga-in-the-park/',
   },
 
   // ===== BIRMINGHAM — Poetry, books, talks =====
@@ -271,6 +294,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Featured readers + open mic.',
     why: 'Most consistent spoken word.',
+    url: 'https://www.glee.co.uk/performer/verve-poetry-night/',
   },
   {
     title: 'Verve Open Door (open mic)',
@@ -282,6 +306,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Bring a poem, read it.',
     why: 'Welcoming, no audition.',
+    url: 'https://www.eventbrite.co.uk/e/verve-open-door-an-open-mic-poetry-event-for-all-tickets-1734008027689',
   },
   {
     title: 'Author talk: Kit de Waal',
@@ -293,6 +318,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Birmingham novelist in conversation.',
     why: 'Local writer, real voice.',
+    url: 'https://www.kitdewaal.com/',
   },
 
   // ===== BIRMINGHAM — Art, crafts, markets =====
@@ -306,6 +332,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Eastern European makers.',
     why: 'Real craft, good coffee.',
+    url: 'https://www.facebook.com/centralacafe/',
   },
   {
     title: 'Digbeth First Friday',
@@ -317,6 +344,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Gallery openings, late opening.',
     why: 'Walking the studios is the thing.',
+    url: 'https://digbethfirstfriday.com/',
   },
   {
     title: 'Ikon Gallery — current exhibition',
@@ -328,6 +356,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Contemporary art, free entry.',
     why: 'Always worth a stop.',
+    url: 'https://www.ikon-gallery.org/whats-on',
   },
   {
     title: 'Birmingham Museum & Art Gallery',
@@ -339,6 +368,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Pre-Raphaelites, civic history.',
     why: 'The civic collection, free.',
+    url: 'https://www.birminghammuseums.org.uk/birmingham-museum-and-art-gallery',
   },
   {
     title: 'Makers Market',
@@ -350,6 +380,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Independent makers, street food.',
     why: 'Hockley does this well.',
+    url: 'https://digbethdiningclub.com/event/hockley-market',
   },
 
   // ===== BIRMINGHAM — Theatre, comedy, dance =====
@@ -363,6 +394,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Full-length classical ballet.',
     why: 'Top-tier company at home.',
+    url: 'https://www.birminghamhippodrome.com/calendar/brb-cinderella-two/',
   },
   {
     title: 'Funny Beeseness — Shappi Khorsandi',
@@ -374,6 +406,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Headliner plus locals.',
     why: 'A proper club night.',
+    url: 'https://castleandfalcon.com/',
   },
   {
     title: 'Glee Club stand-up',
@@ -385,6 +418,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Four-act circuit night.',
     why: 'Reliable Friday or Saturday.',
+    url: 'https://www.glee.co.uk/birmingham/',
   },
   {
     title: 'Rep Theatre — current production',
@@ -396,6 +430,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'New writing, main stage.',
     why: 'The Rep is back on form.',
+    url: 'https://www.birmingham-rep.co.uk/whats-on/',
   },
 
   // ===== BIRMINGHAM — Food, family, LGBTQ+ =====
@@ -409,6 +444,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Street food, drinks, music.',
     why: 'The original, still good.',
+    url: 'https://digbethdiningclub.com/events',
   },
   {
     title: 'Birmingham Pride',
@@ -420,6 +456,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Parade, three stages, late.',
     why: 'One of the bigger UK Prides.',
+    url: 'https://birminghampride.com/',
   },
   {
     title: 'Cannon Hill parkrun',
@@ -431,6 +468,7 @@ export const EVENTS = [
     city: 'birmingham',
     blurb: 'Free weekly 5k.',
     why: 'Just turn up.',
+    url: 'https://www.parkrun.org.uk/cannonhill/',
   },
 
   // ===== COVENTRY =====
@@ -444,6 +482,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'Queen catalogue, jukebox musical.',
     why: 'Sing-along guaranteed.',
+    url: 'https://www.belgrade.co.uk/events/we-will-rock-you/',
   },
   {
     title: 'That\'ll Be The Day — 40th Anniversary',
@@ -455,6 +494,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: '50s/60s rock\'n\'roll revue.',
     why: 'For the rock\'n\'roll strand.',
+    url: 'https://www.belgrade.co.uk/events/thatll-be-the-day/',
   },
   {
     title: 'Our Public House',
@@ -466,6 +506,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'New play set in a pub.',
     why: 'Sharp local writing.',
+    url: 'https://www.belgrade.co.uk/events/our-public-house/',
   },
   {
     title: 'The Enormous Crocodile — The Musical',
@@ -477,6 +518,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'Roald Dahl, properly staged.',
     why: 'For families with younger kids.',
+    url: 'https://www.belgrade.co.uk/events/enormous-crocodile/',
   },
   {
     title: 'Brainiac Live!',
@@ -488,6 +530,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'TV science show, on stage.',
     why: 'Kids will lose their minds.',
+    url: 'https://www.belgrade.co.uk/events/brainiac-live/',
   },
   {
     title: 'A Tribute to the Carpenters',
@@ -499,6 +542,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'The hits, well sung.',
     why: 'For the Carpenters obsessive.',
+    url: 'https://www.belgrade.co.uk/events/carpenters-26/',
   },
   {
     title: 'Hold Your Own — Dance',
@@ -510,6 +554,7 @@ export const EVENTS = [
     city: 'coventry',
     blurb: 'Three local dance companies.',
     why: 'See what Coventry is making.',
+    url: 'https://www.warwickartscentre.co.uk/',
   },
 
   // ===== WOLVERHAMPTON =====
@@ -523,6 +568,7 @@ export const EVENTS = [
     city: 'wolverhampton',
     blurb: 'Four-act touring lineup.',
     why: 'Local without travel.',
+    url: 'https://www.thehallswolverhampton.co.uk/comedy-events/',
   },
   {
     title: 'Newhampton Acoustic Night',
@@ -534,6 +580,7 @@ export const EVENTS = [
     city: 'wolverhampton',
     blurb: 'Three songwriters, candles.',
     why: 'Closest acoustic to Wolves.',
+    url: 'https://wolverhamptonartscentre.co.uk/whats-on/',
   },
   {
     title: 'Kidical Mass Wolverhampton',
@@ -545,6 +592,7 @@ export const EVENTS = [
     city: 'wolverhampton',
     blurb: 'Family bike ride, marshalled.',
     why: 'Safe ride with the kids.',
+    url: 'https://www.eventbrite.co.uk/e/wolverhampton-kidical-mass-2026-tickets-1982740532306',
   },
   {
     title: 'Wolverhampton Art Gallery',
@@ -556,6 +604,7 @@ export const EVENTS = [
     city: 'wolverhampton',
     blurb: 'Pop art, civic collection.',
     why: 'Underrated regional gallery.',
+    url: 'https://www.wolverhamptonart.org.uk/visit/wolves/',
   },
 
   // ===== DUDLEY =====
@@ -569,6 +618,7 @@ export const EVENTS = [
     city: 'dudley',
     blurb: 'Disco/soul live orchestra.',
     why: 'A summer-evening pleasure.',
+    url: 'https://www.skiddle.com/whats-on/Dudley/Himley-Hall/',
   },
   {
     title: 'Dudley Castle & Zoo',
@@ -580,6 +630,7 @@ export const EVENTS = [
     city: 'dudley',
     blurb: 'Norman castle, working zoo.',
     why: 'A whole-day expedition.',
+    url: 'https://www.dudleyzoo.org.uk/',
   },
   {
     title: 'Black Country Living Museum',
@@ -591,6 +642,7 @@ export const EVENTS = [
     city: 'dudley',
     blurb: 'Peaky Blinders filming location.',
     why: 'For the Peaky pilgrim.',
+    url: 'https://bclm.com/',
   },
 
   // ===== WALSALL =====
@@ -604,6 +656,7 @@ export const EVENTS = [
     city: 'walsall',
     blurb: 'Parade, stalls, main stage.',
     why: 'Local Pride, bigger every year.',
+    url: 'https://www.walsallpride.co.uk/',
   },
   {
     title: 'The New Art Gallery Walsall',
@@ -615,6 +668,7 @@ export const EVENTS = [
     city: 'walsall',
     blurb: 'Contemporary, plus Garman Ryan.',
     why: 'Free, top-tier, often empty.',
+    url: 'https://thenewartgallerywalsall.org.uk/',
   },
   {
     title: 'Walsall Town Centre Photo Festival',
@@ -626,6 +680,7 @@ export const EVENTS = [
     city: 'walsall',
     blurb: 'Public photography installations.',
     why: 'A walking-tour weekend.',
+    url: 'https://go.walsall.gov.uk/newsroom/tickets-now-sale-fotofest-2026-visual-expo-walsall',
   },
 
   // ===== SANDWELL =====
@@ -639,6 +694,7 @@ export const EVENTS = [
     city: 'sandwell',
     blurb: 'Multi-cultural arts events.',
     why: 'Real community programming.',
+    url: 'https://www.creativeblackcountry.co.uk/three-15-sandwell-place-partnership',
   },
 
   // ===== SOLIHULL =====
@@ -652,6 +708,7 @@ export const EVENTS = [
     city: 'solihull',
     blurb: 'Makers and food stalls.',
     why: 'Easy day out.',
+    url: 'https://www.touchwoodsolihull.co.uk/whats-new',
   },
 
   // ===== WORCESTER =====
@@ -665,6 +722,7 @@ export const EVENTS = [
     city: 'worcester',
     blurb: 'Authentic Andalucian flamenco.',
     why: 'Better than the touring shows.',
+    url: 'https://worcestertheatres.co.uk/swan-theatre/whats-on/flamenco-from-spain-rebeca-ortega--ramon-ruiz',
   },
   {
     title: 'Bryony Kimmings — Bog Witch',
@@ -676,6 +734,7 @@ export const EVENTS = [
     city: 'worcester',
     blurb: 'Storyteller-comic, raw and clever.',
     why: 'A serious theatre brain.',
+    url: 'https://www.ents24.com/worcester-events/the-swan-theatre',
   },
   {
     title: 'Worcester Cathedral evensong',
@@ -687,6 +746,7 @@ export const EVENTS = [
     city: 'worcester',
     blurb: 'Choral evensong, daily.',
     why: 'Free, peaceful, 40 minutes.',
+    url: 'https://www.worcestercathedral.org.uk/worship/services',
   },
 
   // ===== STRATFORD-ON-AVON =====
@@ -700,6 +760,7 @@ export const EVENTS = [
     city: 'stratford',
     blurb: 'Solo set, 90s Britpop voice.',
     why: 'Properly intimate.',
+    url: 'https://www.ents24.com/uk/tour-dates/nigel-clark-1',
   },
   {
     title: 'RSC — current Shakespeare',
@@ -711,6 +772,7 @@ export const EVENTS = [
     city: 'stratford',
     blurb: 'Main-stage Shakespeare, properly done.',
     why: 'The standard for the country.',
+    url: 'https://www.rsc.org.uk/whats-on',
   },
   {
     title: 'ABBA Tribute — Kiss the Teacher',
@@ -722,6 +784,7 @@ export const EVENTS = [
     city: 'stratford',
     blurb: 'The hits, done with love.',
     why: 'A cheerful evening.',
+    url: 'https://www.kisstheteacher.co.uk/about-abba-band',
   },
 
   // ===== WARWICK =====
@@ -735,6 +798,7 @@ export const EVENTS = [
     city: 'warwick',
     blurb: 'Jousting, falconry, fireworks.',
     why: 'A whole-day with kids.',
+    url: 'https://www.warwick-castle.com/',
   },
 
   // ===== SHROPSHIRE =====
@@ -748,6 +812,7 @@ export const EVENTS = [
     city: 'shropshire',
     blurb: 'Regional touring rep.',
     why: 'Solid programming.',
+    url: 'https://www.theatresevern.co.uk/',
   },
   {
     title: 'Shropshire Hills walking',
@@ -759,6 +824,7 @@ export const EVENTS = [
     city: 'shropshire',
     blurb: 'AONB heath and ridge walks.',
     why: 'Hills proper, not pretend.',
+    url: 'https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/carding-mill-valley-on-the-long-mynd',
   },
   {
     title: 'Ironbridge Gorge Museums',
@@ -770,6 +836,7 @@ export const EVENTS = [
     city: 'telford',
     blurb: 'Ten museums, UNESCO site.',
     why: 'Worth at least a full day.',
+    url: 'https://www.ironbridge.org.uk/plan-your-visit/ticket-prices/',
   },
 
   // ===== HEREFORDSHIRE =====
@@ -783,6 +850,7 @@ export const EVENTS = [
     city: 'herefordshire',
     blurb: 'World-class literary festival.',
     why: 'Still time for the closing days.',
+    url: 'https://www.hayfestival.com/hay-on-wye/home',
   },
   {
     title: 'Black Mountains walks',
@@ -794,6 +862,7 @@ export const EVENTS = [
     city: 'herefordshire',
     blurb: 'Ridge walks, big skies.',
     why: 'Proper walking country.',
+    url: 'https://www.blackmountains.wales/the-black-mountains/',
   },
 
   // ===== STAFFORDSHIRE =====
@@ -807,6 +876,7 @@ export const EVENTS = [
     city: 'lichfield',
     blurb: 'Annual arts festival, cathedral-led.',
     why: 'One of the better small festivals.',
+    url: 'https://lichfieldfestival.org/booking/',
   },
   {
     title: 'Cannock Chase mountain biking',
@@ -818,6 +888,7 @@ export const EVENTS = [
     city: 'cannockchase',
     blurb: 'Forest trails, all levels.',
     why: 'Best bike trails in region.',
+    url: 'https://www.forestryengland.uk/cannock-chase-forest/cycling-and-mountain-biking-trails-cannock-chase-forest',
   },
   {
     title: 'Trentham Gardens',
@@ -829,6 +900,7 @@ export const EVENTS = [
     city: 'stoke',
     blurb: 'Italian gardens, monkey forest.',
     why: 'A proper day out.',
+    url: 'https://trentham.co.uk/',
   },
 
   // ===== WARWICKSHIRE =====
@@ -842,6 +914,7 @@ export const EVENTS = [
     city: 'tamworth',
     blurb: 'Bingo + 90s rave hits.',
     why: 'Genuinely funny chaos.',
+    url: 'https://www.eventbrite.com/e/ultimate-rave-bingo-20th-june-2026-tamworth-tickets-1978272550452',
   },
   {
     title: 'Nuneaton Saturday market',
@@ -853,6 +926,7 @@ export const EVENTS = [
     city: 'nuneaton',
     blurb: 'Long-running town market.',
     why: 'Local, not a tourist thing.',
+    url: 'https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres',
   },
 
   // ===== WORCESTERSHIRE =====
@@ -866,6 +940,7 @@ export const EVENTS = [
     city: 'redditch',
     blurb: 'Back-room folk club.',
     why: 'Local folk circuit, still going.',
+    url: 'https://members.tripod.com/bryn_pearson-ivil/redditchfolkclub/index.html',
   },
   {
     title: 'Bromsgrove parkrun',
@@ -877,6 +952,7 @@ export const EVENTS = [
     city: 'bromsgrove',
     blurb: 'Free 5k, park course.',
     why: 'Just turn up.',
+    url: 'https://www.parkrun.org.uk/bromsgrove-juniors/',
   },
   {
     title: 'Malvern Hills walking',
@@ -888,5 +964,6 @@ export const EVENTS = [
     city: 'malvernhills',
     blurb: 'Ridge walk, panoramic views.',
     why: 'The classic Midlands walk.',
+    url: 'https://www.malvernhills.org.uk/visiting/walking/',
   },
 ];
