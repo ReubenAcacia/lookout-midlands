@@ -187,16 +187,6 @@ function Masthead({ subtitle }: { subtitle?: string }) {
       padding: '24px 22px 18px',
       background: PALETTE.paper,
     }}>
-      <div style={{
-        fontFamily: "'IBM Plex Mono', ui-monospace, monospace",
-        fontSize: '10px',
-        letterSpacing: '0.22em',
-        textTransform: 'uppercase',
-        color: PALETTE.inkSoft,
-        marginBottom: '8px',
-      }}>
-        A West Midlands miscellany · Saturday paper
-      </div>
       <h1 style={{
         fontFamily: "'Cormorant Garamond', Georgia, serif",
         fontWeight: 600,
