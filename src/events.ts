@@ -44,7 +44,6 @@ const LBL: Record<string, string> = {
   stafford: 'Stafford',
   staffsmoorlands: 'Staffordshire Moorlands',
   tamworth: 'Tamworth',
-  northwarks: 'North Warwickshire',
   nuneaton: 'Nuneaton',
   rugby: 'Rugby',
   stratford: 'Stratford-upon-Avon',
@@ -535,7 +534,7 @@ const flavour: Ev[] = [
   // Tamworth
   lgaEv('tamworth', 'Tamworth Castle', 'Tamworth Castle', 'Wed-Sun', '11am-4pm', '£8', ['museums','family'], 'Norman motte-and-bailey castle.', 'Compact, atmospheric, good for kids.', 'https://www.tamworthcastle.co.uk/'),
   // North Warks
-  lgaEv('northwarks', 'Pooley Country Park', 'Polesworth, North Warks', 'Daily', 'Dawn-dusk', 'Free', ['walking','family','community'], 'Former colliery, now nature reserve.', 'Easy lake circuit.', 'https://www.warwickshire.gov.uk/countrysidewalking/pooley-country-park'),
+  lgaEv('nuneaton', 'Pooley Country Park', 'Polesworth, North Warks', 'Daily', 'Dawn-dusk', 'Free', ['walking','family','community'], 'Former colliery, now nature reserve.', 'Easy lake circuit.', 'https://www.warwickshire.gov.uk/countrysidewalking/pooley-country-park'),
   // Nuneaton
   lgaEv('nuneaton', 'Nuneaton Museum & Art Gallery', 'Riversley Park, Nuneaton', 'Wed-Sun', '11am-4pm', 'Free', ['museums','art'], 'Civic gallery, George Eliot focus.', 'Free, peaceful, a hidden gem.', 'https://www.nuneatonmuseum.org.uk/'),
   // Rugby
