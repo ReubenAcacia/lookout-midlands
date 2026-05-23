@@ -69,7 +69,7 @@ const HAND: Ev[] = [
   { title: 'Scott Bradlee\'s Postmodern Jukebox', venue: 'Symphony Hall, Birmingham', date: 'Tue 26 May', time: '7.30pm', price: '£40', tags: ['jazz', 'classical'], city: 'birmingham', blurb: 'Pop hits, vintage jazz arrangements.', why: 'Genuine swing-band fun.', url: 'https://www.songkick.com/concerts/42897890-scott-bradlees-postmodern-jukebox-at-symphony-hall' },
   { title: 'Rumours of Fleetwood Mac', venue: 'Symphony Hall, Birmingham', date: 'Tue 30 June', time: '7.30pm', price: '£32', tags: ['rock70s'], city: 'birmingham', blurb: 'Tight late-70s Mac tribute.', why: 'Clean 70s rock pick.', url: 'https://bmusic.co.uk/events/rumours-of-fleetwood-mac-2026' },
   { title: 'CBSO — Mozart & Brahms', venue: 'Symphony Hall, Birmingham', date: 'Wed 3 June', time: '7.30pm', price: '£28', tags: ['classical'], city: 'birmingham', blurb: 'Mozart 39, Brahms 3.', why: 'Programme of substance.', url: 'https://cbso.co.uk/whats-on' },
-  { title: 'CBSO — Mahler 5', venue: 'Symphony Hall, Birmingham', date: 'Fri 12 June', time: '7.30pm', price: '£32', tags: ['classical'], city: 'birmingham', blurb: 'Full Mahler symphony, big band.', why: 'A proper night out.', url: 'https://www.whatsonlive.co.uk/birmingham/event/symphony-hall/cbso-mahlers-fifth-symphony/274584' },
+  { title: 'CBSO — Mahler 5', venue: 'Symphony Hall, Birmingham', date: 'Fri 12 June', time: '7.30pm', price: '£32', tags: ['classical'], city: 'birmingham', blurb: 'Full Mahler symphony, big band.', why: 'A proper night out.', url: 'https://cbso.co.uk/whats-on' },
 
   // ===== BIRMINGHAM — Hare & Hounds =====
   { title: 'Heritage (Stanton Warriors, Graeme Park)', venue: 'Hare & Hounds, Kings Heath', date: 'Sat 6 June', time: '8pm', price: '£20', tags: ['dnb'], city: 'birmingham', blurb: 'Old-school house & breakbeat.', why: 'Veteran DJs, intimate room.', url: 'https://www.skiddle.com/g/heritagenights/' },
@@ -171,7 +171,7 @@ const HAND: Ev[] = [
   { title: 'Trentham Gardens', venue: 'Trentham, Stoke-on-Trent', date: 'Throughout June', time: '9am-6pm', price: '£14', tags: ['walking', 'family', 'art'], city: 'stoke', blurb: 'Italian gardens, monkey forest.', why: 'A proper day out.', url: 'https://trentham.co.uk/' },
 
   // ===== TAMWORTH / NUNEATON =====
-  { title: 'Ultimate Rave Bingo', venue: 'Tamworth', date: 'Sat 20 June', time: '7pm', price: '£18', tags: ['dnb', 'comedy'], city: 'tamworth', blurb: 'Bingo + 90s rave hits.', why: 'Genuinely funny chaos.', url: 'https://www.eventbrite.com/e/ultimate-rave-bingo-20th-june-2026-tamworth-tickets-1978272550452' },
+  { title: 'Ultimate Rave Bingo', venue: 'Tamworth', date: 'Sat 20 June', time: '7pm', price: '£18', tags: ['dnb', 'comedy'], city: 'tamworth', blurb: 'Bingo + 90s rave hits.', why: 'Genuinely funny chaos.', url: 'https://www.ravebingo.co.uk/' },
   { title: 'Nuneaton Saturday market', venue: 'Nuneaton town centre', date: 'Saturdays', time: '9am-4pm', price: 'Free', tags: ['markets', 'food'], city: 'nuneaton', blurb: 'Long-running town market.', why: 'Local, not a tourist thing.', url: 'https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres' },
 
   // ===== WORCESTERSHIRE =====
@@ -185,7 +185,23 @@ const HAND: Ev[] = [
 // URLs point to venue / organisation / what's-on listings.
 // ============================================================
 
-const skiddle = (city: string) => `https://www.skiddle.com/whats-on/${LBL[city].replace(/ /g, '-')}/`;
+// Skiddle uses fixed city slugs; for LGAs without a Skiddle page,
+// fall back to the nearest big-city listing or Skiddle's UK home.
+const SKIDDLE_SLUGS: Record<string, string> = {
+  birmingham: 'Birmingham', coventry: 'Coventry', wolverhampton: 'Wolverhampton',
+  dudley: 'Dudley', sandwell: 'Sandwell', walsall: 'Walsall', solihull: 'Solihull',
+  stoke: 'Stoke-On-Trent', stafford: 'Stafford', lichfield: 'Lichfield',
+  tamworth: 'Tamworth', cannockchase: 'Cannock', staffsmoorlands: 'Leek',
+  shropshire: 'Shrewsbury', telford: 'Telford', herefordshire: 'Hereford',
+  worcester: 'Worcester', redditch: 'Redditch', bromsgrove: 'Bromsgrove',
+  malvernhills: 'Malvern', wychavon: 'Evesham', wyreforest: 'Kidderminster',
+  warwick: 'Leamington-Spa', stratford: 'Stratford-Upon-Avon',
+  nuneaton: 'Nuneaton', rugby: 'Rugby',
+};
+const skiddle = (city: string) =>
+  SKIDDLE_SLUGS[city]
+    ? `https://www.skiddle.com/whats-on/${SKIDDLE_SLUGS[city]}/`
+    : 'https://www.skiddle.com/whats-on/';
 const eventbrite = (city: string) => `https://www.eventbrite.co.uk/d/united-kingdom--${city}/all-events/`;
 const ents24 = (city: string) => `https://www.ents24.com/uk/tour-dates/${city}`;
 
@@ -229,7 +245,7 @@ const museums: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Tue-Sat', '10am-4pm', 'Free',
   ['museums', 'community', 'family'],
   'Civic collection, free entry.', 'Best on a rainy afternoon.',
-  'https://www.artfund.org/search',
+  'https://www.artfund.org/',
 ));
 
 // --- Council galleries (art × 30) ----------------------------
@@ -247,7 +263,7 @@ const walks: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Any day', 'Daylight', 'Free',
   ['walking', 'community', 'family'],
   'Marked circular, varying length.', 'Free, healthy, weather-permitting.',
-  'https://www.ramblers.org.uk/go-walking/group-walk-finder',
+  'https://www.ramblers.org.uk/go-walking',
 ));
 
 // --- Cycling clubs (cycling × 30) ----------------------------
@@ -265,7 +281,7 @@ const yogaStudios: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Weekday mornings', '9.30am', '£10 drop-in',
   ['yoga', 'community'],
   'Hatha/vinyasa mix, all levels.', 'Light stretching, friendly room.',
-  'https://yogabritain.com/find-yoga',
+  'https://www.bwy.org.uk/',
 ));
 
 // --- Buddhist / meditation (buddhism × 30) -------------------
@@ -274,7 +290,7 @@ const meditation: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Thursdays', '7.30pm', 'Donation',
   ['buddhism', 'community'],
   'Silent sit + brief talk.', 'No experience required.',
-  'https://thebuddhistcentre.com/find',
+  'https://thebuddhistcentre.com/',
 ));
 
 // --- LGBTQ+ groups (lgbtq × 30) ------------------------------
@@ -292,7 +308,7 @@ const photo: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Tuesday evenings', '7.30pm', '£3 visitors',
   ['photography', 'community'],
   'Talks, competitions, walks.', 'Friendly meet-ups, all kit levels.',
-  'https://www.thepagb.org.uk/clubs/',
+  'https://rps.org/',
 ));
 
 // --- Independent cinema (cinema × 30) ------------------------
@@ -301,7 +317,7 @@ const cinema: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Fri evenings', '7.30pm', '£6',
   ['cinema', 'community', 'family'],
   'Recent indie + classic screenings.', 'Cheap film + tea cake.',
-  'https://cinemaforall.org.uk/find-a-cinema/',
+  'https://cinemaforall.org.uk/',
 ));
 
 // --- Community choirs (classical × 30) -----------------------
@@ -319,7 +335,7 @@ const folkClubs: Ev[] = ALL_LGAS.map(c => lgaEv(
   'First Wednesday', '8pm', '£6',
   ['folk', 'community'],
   'Songs, tunes, audience welcome.', 'Old-fashioned in the best way.',
-  'https://folkclubs.org.uk/',
+  'https://www.efdss.org/',
 ));
 
 // --- Jazz nights (jazz × 30) ---------------------------------
@@ -328,7 +344,7 @@ const jazzNights: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Sun evenings', '7.30pm', '£10',
   ['jazz', 'community'],
   'Resident trio + visiting soloist.', 'Reliably good Sunday wind-down.',
-  'https://jazzguide.uk/',
+  'https://www.jazzfuel.com/',
 ));
 
 // --- Indie nights (indie × 30) -------------------------------
@@ -382,7 +398,7 @@ const worldNights: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Sat 21 June', '7.30pm', '£12',
   ['world', 'community', 'dance'],
   'Touring international act + locals.', 'Hear something new.',
-  'https://www.songlines.co.uk/whats-on',
+  'https://www.songlines.co.uk/',
 ));
 
 // --- Poetry open mic (poetry × 30) ---------------------------
@@ -409,7 +425,7 @@ const foodEvents: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Sat-Sun', '11am-5pm', 'Free entry',
   ['food', 'markets', 'family'],
   'Street food, local producers.', 'Lunch sorted, samples free.',
-  'https://www.foodanddrinkbritain.com/events',
+  'https://www.greatbritishfoodfestival.com/',
 ));
 
 // --- Family events (family × 30) -----------------------------
@@ -463,7 +479,7 @@ const volunteering: Ev[] = ALL_LGAS.map(c => lgaEv(
   'Saturdays', '10am-1pm', 'Free',
   ['community', 'walking', 'family'],
   'Help maintain a shared green space.', 'Friendly, hands in soil.',
-  'https://www.communitygarden.org.uk/find-a-garden',
+  'https://www.farmgarden.org.uk/',
 ));
 
 // --- Extra Birmingham-area density ---------------------------
@@ -487,7 +503,7 @@ const covExtras: Ev[] = [
   lgaEv('coventry', 'Coventry Music Museum', 'Walsgrave Rd, Coventry', 'Wed-Sun', '11am-4pm', '£5', ['museums','rock70s'], '2-Tone, Specials, all of it.', 'Vital to understanding the city.', 'https://covmm.co.uk/'),
   lgaEv('coventry', 'Fargo Village makers market', 'Fargo Village, Far Gosford St', 'Sat 14 June', '11am-4pm', 'Free', ['markets','crafts','food'], 'Independent shops + makers.', 'Coventry\'s creative quarter.', 'https://fargovillage.co.uk/'),
   lgaEv('coventry', 'Albany Theatre', 'Albany Theatre, Coventry', 'Wed-Sat', '7.30pm', '£18', ['theatre','comedy'], 'Mid-scale touring theatre.', 'Programming above its weight.', 'https://albanytheatre.co.uk/'),
-  lgaEv('coventry', 'Coombe Abbey walks', 'Coombe Abbey Country Park', 'Daily', 'Dawn to dusk', '£3 parking', ['walking','family'], 'Lake, woods, easy paths.', 'Pram-friendly, year-round.', 'https://www.coombeabbey.com/country-park/'),
+  lgaEv('coventry', 'Coombe Abbey walks', 'Coombe Abbey Country Park', 'Daily', 'Dawn to dusk', '£3 parking', ['walking','family'], 'Lake, woods, easy paths.', 'Pram-friendly, year-round.', 'https://www.coombeabbey.com/'),
 ];
 
 // --- Extra Wolverhampton density -----------------------------
@@ -524,19 +540,19 @@ const flavour: Ev[] = [
   lgaEv('cannockchase', 'Shugborough Estate', 'Shugborough, Staffordshire', 'Daily', '10am-5pm', '£15', ['museums','family','walking'], 'National Trust estate.', 'Big house, big grounds.', 'https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/shugborough-estate'),
   // Stafford
   lgaEv('stafford', 'Gatehouse Theatre Stafford', 'Eastgate St, Stafford', 'Wed-Sat', '7.30pm', '£15', ['theatre','family'], 'Mid-scale touring + local.', 'County town\'s arts hub.', 'https://www.staffordgatehousetheatre.co.uk/'),
-  lgaEv('stafford', 'Stafford Castle', 'Stafford Castle, Stafford', 'Daily', '11am-4pm', 'Free', ['museums','walking','family'], 'Ruined Norman castle.', 'A view, a wander, free.', 'https://www.staffordbc.gov.uk/stafford-castle'),
+  lgaEv('stafford', 'Stafford Castle', 'Stafford Castle, Stafford', 'Daily', '11am-4pm', 'Free', ['museums','walking','family'], 'Ruined Norman castle.', 'A view, a wander, free.', 'https://www.visitstafford.org/'),
   // Staffs Moorlands
   lgaEv('staffsmoorlands', 'Roaches walk', 'The Roaches, Staffs', 'Any day', 'Daylight', 'Free', ['walking','community'], 'Gritstone ridge above Leek.', 'Best walk in Staffordshire.', 'https://www.peakdistrict.gov.uk/'),
   lgaEv('staffsmoorlands', 'Foxlowe Arts Centre, Leek', 'Foxlowe, Leek', 'Tue-Sat', '10am-4pm', 'Free', ['art','community'], 'Community-run arts centre.', 'Surprisingly ambitious programming.', 'https://www.foxlowe.org/'),
   // Tamworth
   lgaEv('tamworth', 'Tamworth Castle', 'Tamworth Castle', 'Wed-Sun', '11am-4pm', '£8', ['museums','family'], 'Norman motte-and-bailey castle.', 'Compact, atmospheric, good for kids.', 'https://www.tamworthcastle.co.uk/'),
   // North Warks
-  lgaEv('nuneaton', 'Pooley Country Park', 'Polesworth, North Warks', 'Daily', 'Dawn-dusk', 'Free', ['walking','family','community'], 'Former colliery, now nature reserve.', 'Easy lake circuit.', 'https://www.warwickshire.gov.uk/countrysidewalking/pooley-country-park'),
+  lgaEv('nuneaton', 'Pooley Country Park', 'Polesworth, North Warks', 'Daily', 'Dawn-dusk', 'Free', ['walking','family','community'], 'Former colliery, now nature reserve.', 'Easy lake circuit.', 'https://www.warwickshire.gov.uk/'),
   // Nuneaton
   lgaEv('nuneaton', 'Nuneaton Museum & Art Gallery', 'Riversley Park, Nuneaton', 'Wed-Sun', '11am-4pm', 'Free', ['museums','art'], 'Civic gallery, George Eliot focus.', 'Free, peaceful, a hidden gem.', 'https://www.nuneatonmuseum.org.uk/'),
   // Rugby
-  lgaEv('rugby', 'Rugby School Museum', 'Lawrence Sheriff St, Rugby', 'Mon-Sat', '10am-4pm', '£5', ['museums','sports'], 'Where the game was invented.', 'Object-rich, well-told story.', 'https://www.rugbyschool.co.uk/visit-us/museum/'),
-  lgaEv('rugby', 'Draycote Water walk', 'Draycote Water, Rugby', 'Daily', 'Dawn-dusk', '£5 parking', ['walking','cycling','family'], 'Reservoir circuit, 5-mile path.', 'Flat, popular with cyclists.', 'https://www.severntrent.com/draycote-water/'),
+  lgaEv('rugby', 'Rugby School Museum', 'Lawrence Sheriff St, Rugby', 'Mon-Sat', '10am-4pm', '£5', ['museums','sports'], 'Where the game was invented.', 'Object-rich, well-told story.', 'https://www.rugbyschool.co.uk/'),
+  lgaEv('rugby', 'Draycote Water walk', 'Draycote Water, Rugby', 'Daily', 'Dawn-dusk', '£5 parking', ['walking','cycling','family'], 'Reservoir circuit, 5-mile path.', 'Flat, popular with cyclists.', 'https://www.draycotewater.co.uk/'),
   // Stratford (extras beyond hand-picked)
   lgaEv('stratford', 'Shakespeare\'s Birthplace', 'Henley St, Stratford', 'Daily', '10am-5pm', '£20', ['museums','books','family'], 'The Birthplace + town tour.', 'It is what it says.', 'https://www.shakespeare.org.uk/'),
   // Warwick (extras)
@@ -562,7 +578,7 @@ const flavour: Ev[] = [
   lgaEv('solihull', 'Solihull Arts Complex', 'Library Sq, Solihull', 'Tue-Sat', '7.30pm', 'from £14', ['theatre','comedy','community'], 'Touring drama, comedy, music.', 'Easy theatre night out.', 'https://www.theartscomplex.co.uk/'),
   lgaEv('solihull', 'Knowle to Lapworth canal walk', 'Grand Union Canal, Solihull', 'Any day', 'Daylight', 'Free', ['walking','cycling','community'], 'Towpath walk past locks.', 'Flat, beautiful, family-easy.', 'https://canalrivertrust.org.uk/'),
   // Birmingham more
-  lgaEv('birmingham', 'Selly Oak parkrun', 'Selly Oak Park, Birmingham', 'Saturdays', '9am', 'Free', ['running','community','family'], 'Smaller-field 5k.', 'Less crowded than Cannon Hill.', 'https://www.parkrun.org.uk/sellyoak/'),
+  lgaEv('birmingham', 'Selly Oak parkrun', 'Selly Oak Park, Birmingham', 'Saturdays', '9am', 'Free', ['running','community','family'], 'Smaller-field 5k.', 'Less crowded than Cannon Hill.', 'https://www.parkrun.org.uk/'),
   lgaEv('birmingham', 'Pebble Mill cycling event', 'Pebble Mill Rd, Birmingham', 'Sun 15 June', '8am', '£10', ['cycling','sports','community'], 'Marshalled road sportive.', 'Closed-road, proper test.', 'https://www.britishcycling.org.uk/events'),
 ];
 
